@@ -10,7 +10,7 @@ const cors=require('cors')
 // express app
 const app = express()
 app.use(cors({
-  origin: process.env.SERVER_URL ?.replace(/\/$/, ""), // Allow all origins for now , later replace with frontend url
+  origin: ["https://workout-frontend-weld.vercel.app"],
   methods: ["GET", "POST", "PATCH", "DELETE"],
   credentials: true
 }))
