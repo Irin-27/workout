@@ -10,10 +10,11 @@ const cors=require('cors')
 // express app
 const app = express()
 app.use(cors({
-  origin: ["https://workout-frontend-weld.vercel.app"],
+  origin: "https://workout-frontend-weld.vercel.app",
   methods: ["GET", "POST", "PATCH", "DELETE"],
   credentials: true
 }))
+console.log("CORS allowed for:", "https://workout-frontend-weld.vercel.app");
 // middleware
 app.use(express.json())
 
