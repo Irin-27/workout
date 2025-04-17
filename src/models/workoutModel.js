@@ -15,6 +15,19 @@ const workoutSchema = new Schema({
     type: Number,
     required: true
   },
+  category: {
+    type: String,
+    enum: ['strength', 'cardio', 'flexibility', 'balance', 'hiit'],
+    default: 'strength'
+  },
+  duration: {
+    type: Number,
+    default: null
+  },
+  notes: {
+    type: String,
+    default: ""
+  },
   user_id: {
     type: String,
     required: true
